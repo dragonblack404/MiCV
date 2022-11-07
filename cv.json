@@ -1,0 +1,24 @@
+{
+  "personal": {
+    "identificacion": "12345678Z",
+    "nombre": "Chuck",
+    "apellidos": "Norris",
+    "fechaNacimiento": {
+      "year": 1954,
+      "month": 11,
+      "day": 25
+    },
+    "direccion": null,
+    "codigoPostal": null,
+    "localidad": null,
+    "pais": "Estados Unidos",
+    "nacionalidades": [
+      {
+        "denominacion": "Española"
+      },
+      {
+        "denominacion": "Americana"
+      }
+    ]
+  }
+}
