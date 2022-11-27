@@ -6,14 +6,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.OpenOption;
 import java.nio.file.StandardOpenOption;
 import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.hildan.fxgson.FxGson;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 
@@ -21,8 +22,6 @@ import dad.micv.json.LocalDateAdapter;
 import dad.micv.model.CV;
 import dad.micv.model.Nacionalidad;
 import dad.micv.model.Personal;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 
 public class Main {
 	
@@ -33,10 +32,32 @@ public class Main {
 	
 	public static void main(String[] args) throws IOException {
 		
-		saveCV();
-		
-		loadCV();
-		
+//		saveCV();
+//		loadCV();
+ 
+//		App.main(args);
+ 
+ 
+//		URI uri = Main.class.getResource("/csv/nacionalidades.csv").toURI();
+//		
+//		List<String> lines = Files.readAllLines(Paths.get(uri), StandardCharsets.UTF_8);
+//		
+//		lines
+//			.stream()
+//			.map(x -> 6)
+//			.forEach(n -> System.out.println(n));
+ 
+ 
+		List<Integer> numeros = Arrays.asList(6, 8, 34, 25, 32);
+		List<Integer> cuadradosMayores1000 = numeros
+				.stream()
+				.filter(n -> (n * n) >= 1000)
+				.collect(Collectors.toList());
+ 
+		System.out.println(cuadradosMayores1000);
+ 
+//		System.out.println(nacionalidades);
+ 
 	}
 
 	private static void loadCV() throws JsonSyntaxException, JsonIOException, FileNotFoundException {
