@@ -8,6 +8,7 @@
 		<maven.compiler.target>15</maven.compiler.target>
 		<maven.compiler.source>15</maven.compiler.source>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<exec.mainClass>dad.micv.Main</exec.mainClass>
 	</properties>
 
 	<dependencies>
