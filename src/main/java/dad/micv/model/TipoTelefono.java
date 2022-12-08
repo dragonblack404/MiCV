@@ -1,5 +1,6 @@
 package dad.micv.model;
 
-public class TipoTelefono {
-
+public enum TipoTelefono {
+	DOMICILIO,
+	MOVIL
 }

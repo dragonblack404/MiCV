@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="rootPane" prefHeight="477.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="archivoMenu" mnemonicParsing="false" text="Archivo">
+            <items>
+                  <MenuItem fx:id="nuevoItem" mnemonicParsing="false" onAction="#onNuevoAction" text="Nuevo">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/nuevo.gif" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="abrirItem" mnemonicParsing="false" onAction="#onAbrirAction" text="Abrir...">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/abrir.gif" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="guardarItem" mnemonicParsing="false" onAction="#onGuardarAction" text="Guardar">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="G" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/guardar.gif" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="guardarComoItem" mnemonicParsing="false" onAction="#onGuardarComoAction" text="Guardar como..." />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem fx:id="salirItem" mnemonicParsing="false" onAction="#onSalirAction" text="Salir">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+          <Menu fx:id="ayudaMenu" mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Acerca de..." />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="personalTab" closable="false" text="Personal" />
+          <Tab fx:id="contactoTab" closable="false" text="Contacto" />
+            <Tab fx:id="formacionTab" closable="false" text="Formación" />
+            <Tab fx:id="experienciaTab" closable="false" text="Experiencia" />
+            <Tab fx:id="conocimientosTab" closable="false" text="Conocimientos" />
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

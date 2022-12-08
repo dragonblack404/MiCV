@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="contactoPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <SplitPane dividerPositions="0.33, 0.66" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+         <items>
+            <TitledPane fx:id="telefonoPane" animated="false" collapsible="false" text="Teléfonos">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <content>
+                  <HBox spacing="5.0">
+                     <children>
+                        <TableView fx:id="telTableView" editable="true" HBox.hgrow="ALWAYS">
+                          <columns>
+                            <TableColumn fx:id="numColumn" prefWidth="120.0" text="Número" />
+                            <TableColumn fx:id="typeColumn" prefWidth="120.0" text="Tipo" />
+                          </columns>
+                        </TableView>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Button fx:id="addTel" maxWidth="58.4" mnemonicParsing="false" onAction="#onAddTelAction" text="Añadir" />
+                              <Button fx:id="deleteTel" mnemonicParsing="false" onAction="#onDeleteTelAction" text="Eliminar" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content></TitledPane>
+            <TitledPane fx:id="emailPane" animated="false" collapsible="false" text="Direcciones de correo">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <content>
+                  <HBox spacing="5.0">
+                     <children>
+                        <TableView fx:id="emailTableView" editable="true" HBox.hgrow="ALWAYS">
+                          <columns>
+                            <TableColumn fx:id="emailColumn" prefWidth="300.0" text="Email" />
+                          </columns>
+                        </TableView>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Button fx:id="addEmailButton" maxWidth="58.4" mnemonicParsing="false" onAction="#onAddEmailAction" text="Añadir" />
+                              <Button fx:id="deleteEmailButton" mnemonicParsing="false" onAction="#onDeleteEmailAction" text="Eliminar" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content></TitledPane>
+            <TitledPane fx:id="websPane" animated="false" collapsible="false" text="Webs">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <content>
+                  <HBox spacing="5.0">
+                     <children>
+                        <TableView fx:id="websTableView" editable="true" HBox.hgrow="ALWAYS">
+                          <columns>
+                            <TableColumn fx:id="webColumn" prefWidth="300.0" text="URL" />
+                          </columns>
+                        </TableView>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Button fx:id="addWebButton" mnemonicParsing="false" onAction="#onAddWeb" prefWidth="58.4" text="Añadir" />
+                              <Button fx:id="deleteWebButton" mnemonicParsing="false" onAction="#onDeleteWeb" text="Eliminar" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content></TitledPane>
+         </items>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </SplitPane>
+   </center>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</BorderPane>
